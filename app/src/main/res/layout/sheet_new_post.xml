@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sheet_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_new_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/round_close_black_24"
+        app:title="Catatan Baru"
+        app:titleTextAppearance="@style/ToolbarTitleNewPost"/>
+
+    <EditText
+        android:id="@+id/new_post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/white"
+        android:fontFamily="@font/font_regular"
+        android:hint="@string/hint_title"
+        android:inputType="textCapWords"
+        android:padding="@dimen/margin_normal"
+        android:textColor="@color/primary_text"/>
+
+    <EditText
+        android:id="@+id/new_post_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/white"
+        android:fontFamily="@font/font_regular"
+        android:gravity="start"
+        android:hint="@string/hint_content"
+        android:inputType="textMultiLine|textCapSentences"
+        android:lines="10"
+        android:padding="@dimen/margin_normal"
+        android:textColor="@color/primary_text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_delete_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@drawable/btn_post_delete"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:padding="@dimen/margin_normal"
+            android:paddingStart="@dimen/margin_xlarge"
+            android:paddingEnd="@dimen/margin_xlarge"
+            android:text="@string/btn_delete"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/btn_save_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@drawable/btn_post_save"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:padding="@dimen/margin_normal"
+            android:paddingStart="@dimen/margin_xlarge"
+            android:paddingEnd="@dimen/margin_xlarge"
+            android:text="@string/btn_save"
+            android:textAllCaps="true"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

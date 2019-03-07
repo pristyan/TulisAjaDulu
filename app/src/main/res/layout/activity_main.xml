@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/navigation_toolbar"/>
+
+        <ProgressBar
+            android:id="@+id/pb_post"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_default"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_post"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_new_post"
+            android:layout_below="@+id/toolbar_default"/>
+
+        <TextView
+            android:id="@+id/btn_new_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@drawable/bg_btn_add_new"
+            android:fontFamily="@font/poppins_regular"
+            android:maxWidth="200dp"
+            android:padding="@dimen/margin_normal"
+            android:text="Buat Tulisan Baru ..."/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/sheet_new_post"/>
+</android.support.design.widget.CoordinatorLayout>

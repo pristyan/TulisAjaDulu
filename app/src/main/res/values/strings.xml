@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tulis Aja Dulu</string>
+
+    <string name="title_new_post">Catatan Baru</string>
+    <string name="title_edit_post">Ubah Catatan</string>
+    <string name="btn_delete">Hapus</string>
+    <string name="btn_save">Simpan</string>
+    <string name="hint_content">Catatan</string>
+    <string name="hint_title">Judul</string>
+</resources>
